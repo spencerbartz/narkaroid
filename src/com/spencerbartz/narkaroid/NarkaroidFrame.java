@@ -30,7 +30,7 @@ public class NarkaroidFrame extends JFrame implements MouseListener, KeyListener
 		
 		gameManager = new GameManager();
 		soundManager = SoundManager.INSTANCE;
-		//soundManager.loadSounds();
+		soundManager.loadSounds();
 		
 		rPanel = new RenderingPanel(gameManager);
 		Container contentPane = getContentPane();

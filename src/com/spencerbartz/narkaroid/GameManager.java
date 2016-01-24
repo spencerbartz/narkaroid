@@ -104,28 +104,13 @@ public class GameManager
 	{
 		SoundManager soundManager = SoundManager.INSTANCE;
 		
-		/*
-		if(!gameStarted)
-		{
-			gr.drawImage(titleScreen, 0, 0, titleScreen.getWidth(), titleScreen.getHeight(), null);
-		}
-		else
-		{
-			levelManager.draw(gr);
-			levelManager.move();
-		}
-		*/
-		
-		
 		//draw game elements
     	if(gameStarted && !gameOver)
     	{
-    		//TODO (make GameManager for all this crap?)
 	    	levelManager.draw(gr);
 	    	levelManager.move();
 	    	
-	    	//If any, draw intros, outros, continues, and the game ending
-	    	
+	    	//If any, draw intros, outros, continues, and the game ending	
 	    	//level intro
     	    if(!levelManager.getCurrentLevel().isStarted() && !levelManager.isGameWon())
     	    {
@@ -135,9 +120,7 @@ public class GameManager
     	    		ball.reset();
     	    	}
     	    	
-    	    	//Show 'Level N Start' Graphic
-    	    	//levelManager.getCurrentLevel().intro(gr);
-    	    	
+    	    	//Show 'Level N Start' Graphic    	    	
     	    	levelManager.levelIntro(gr);	
     	    	
     	    	//Start bg music for this level
@@ -156,9 +139,7 @@ public class GameManager
     	    	//Start bg music for level N
     	    	//soundManager.startLevelBGM(levelManager.getCurrentLevelNum());
     	    	
-    	    	//Show 'Level N' Graphic 
-    	    	//levelManager.getCurrentLevel().cont(gr);
-    	    	
+    	    	//Show 'Level N' Graphic     	    	
     	    	levelManager.continueLevel(gr);
     	    	
     	    	levelManager.stopPowerUps();
@@ -260,7 +241,7 @@ public class GameManager
 	    			if(paddle.getLives() > 0)
 	    			{
 	    				//stop bg music for this level
-	    				soundManager.stopLevelBGM(levelManager.getCurrentLevelNum());
+	    				//soundManager.stopLevelBGM(levelManager.getCurrentLevelNum());
 	    				
 	    				//subtract a life from player, place paddle in middle of screen
 	    				//show 'Level N' graphic on screen
@@ -272,7 +253,7 @@ public class GameManager
 	    			else
 	    			{
 	    				gameOver = true;
-	    				soundManager.stopLevelBGM(levelManager.getCurrentLevelNum());
+	    				//soundManager.stopLevelBGM(levelManager.getCurrentLevelNum());
 	    				//reset the game so the player can play again
 	    				reset();
 	    			}				    			

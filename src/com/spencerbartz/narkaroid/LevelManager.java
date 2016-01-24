@@ -17,8 +17,8 @@ public class LevelManager
 	BufferedImage [] contImages;
 	
 	//LVL0
-	private static final int LVL0_COLS = 14;
-	private static final int LVL0_ROWS = 5;
+	private static final int LVL0_COLS = 2;
+	private static final int LVL0_ROWS = 2;
 	private static final int LVL0_PWRUPS = 4;
 	
 	//LVL1
